@@ -132,7 +132,7 @@ export default {
         await getCode(this.user.mobile)
         this.$toast('发送验证码成功')
       } catch (err) {
-        if (err.response.status == 429) {
+        if (err.response.status === 429) {
           this.$toast('请求过于频繁，请稍后重试')
           this.logindaojishi = false
         } else {
