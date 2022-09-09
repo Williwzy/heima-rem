@@ -1,7 +1,11 @@
 <template>
   <div class="login-container">
     <!-- 导航栏 -->
-    <van-nav-bar class="page-nav-bar" title="登录" />
+    <van-nav-bar class="page-nav-bar" title="登录">
+      <i slot="left" name="cross" @click="$router.back()"
+        ><van-icon name="cross"
+      /></i>
+    </van-nav-bar>
     <!-- /导航栏 -->
 
     <!-- 登录表单 -->
@@ -147,13 +151,13 @@ export default {
 <style scoped lang="less">
 .login-container {
   .toutiao {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .send-sms-btn {
-    width: 80px;
-    height: 23px;
-    line-height: 23px;
+    width: 160px;
+    height: 46px;
+    line-height: 46px;
     background-color: #ededed;
     font-size: 11px;
     color: #666;
