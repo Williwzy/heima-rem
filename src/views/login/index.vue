@@ -109,10 +109,10 @@ export default {
 
       // 3. 提交表单请求登录
       try {
-        const res = await login(user)
-        this.$store.commit('getUser', res.data.data)
+        const { data } = await login(user)
+        this.$store.commit('getUser', data.data)
         this.$toast.success('登录成功')
-        console.log(res)
+        this.$router.back()
       } catch (err) {
         if (err.response.status === 400) {
           console.log('手机号或验证码错误')
